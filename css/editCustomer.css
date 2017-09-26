@@ -1,0 +1,189 @@
+.HeaderDivEdit
+{
+ position:relative;
+ height:60px;
+ width:80%;
+ margin-top:-10px;
+ margin-left:10%;
+ margin-right:20%;
+ border-radius:5px;
+ border: solid 1px #bbb; 
+ background-image: linear-gradient(#56c5eb, #1798c4);
+ 
+}
+
+ .headingTextEdit
+{
+ font-family:'sans-serif';
+ font-size:1.8em;
+ font-weight:bold;
+ color:#fff;
+ padding-top:10px;
+}
+
+.mybadgeEditFDU
+{
+ position:relative;
+ color:#333;
+ background-color:#fff;
+ left:10px;
+ top:-1px;
+ z-index:1;
+}
+.badgeTxtEditFDU
+{
+ position:relative;
+ left:-35px;
+ top:10px;
+ color:#222;
+ font-weight:bold;
+ z-index:1;
+}
+.EditFDUtable
+{
+ white-space:nowrap;
+ font-size:97%;
+}
+.EditManagertable
+{
+ white-space:nowrap;
+ font-size:97%;
+}
+
+
+/*    Main search Div(including Searchbox,glyphicon and search button) for admin/FDU access   */
+
+
+.searchDivEdit
+{ 
+ position:relative;
+ top:-5px;
+ width:80%;
+ height:35px;
+ left:10%;
+}
+.glyphicon-searchLogoEdit
+{
+ position:relative;
+ left:35px;
+ top:-8px;
+ z-index:1;
+}
+.searchBoxEdit
+{
+ position:relative;
+ top:-9px;
+ left:1px;
+ margin:10px;
+ background-color:#f2f2f2;
+ padding-left:25px;
+ padding-right:20px;
+ height:30px;
+ width:250px;
+ color: #86856f;
+ border-radius:20px;
+ border:1px solid #eee;
+ transition-property: width;
+ transition-duration: 1s;
+}
+.searchBoxEdit:hover
+{
+ background-color: #eee;
+ border-color:#ddd;
+ 
+}
+
+.searchBoxEdit:focus 
+{ 
+ width:400px;
+ background-color:white;
+ border-color:#0000ff;
+}
+
+
+.searchBtnEdit
+{ 
+ position:relative;
+ height:33px;
+ width:90px;
+ top:-10px;
+ left:10px;
+ color:#fff;
+ font-family:'arial';
+ font-size:1em;
+ padding:2px;
+ border-radius:5px;
+ background-color:#d72b23;
+ border-color:#d72b23;
+ 
+} 
+
+.searchBtnEdit:hover
+{ 
+ background-color:#d74723;
+ color:#fff;
+}
+
+.backBtnEdit
+{
+ position:relative;
+ z-index:2;
+ top:-12px;
+ width:90px;
+ float:right;
+ margin-right:20px;
+ background-color:#ff6347;
+ height:40px;
+ 
+}
+.backBtnEdit:hover
+{
+ background-color:#ff7857;
+ 
+}
+
+.hrLineBreakEdit
+{
+ position:relative;
+ top:-10px;
+ background-color:gray;
+ margin:2px;
+ width:99%;
+ display: block;
+ height: 1px;
+}
+.hrLineBreak
+{
+ position:relative;
+ top:-65px;
+ background-color:gray;
+ margin:2px;
+ display: block;
+ height: 1px;
+}
+.hrLineBreakEditFDU
+{
+ position:relative;
+ top:-77px;
+ background-color:gray;
+ margin:2px;
+ display: block;
+ height: 1px;
+}
+
+ 
+.ui-autocomplete {
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.crosssign{
+	color: orange;
+    font-size: 1.5em;
+}
+
+.crosssign:hover{
+	color: red;
+    font-size: 1.5em;
+}

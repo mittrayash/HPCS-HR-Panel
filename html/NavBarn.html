@@ -1,0 +1,250 @@
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<style>
+.half-circle {
+    width: 25px;
+    height: 50px; /* as the half of the width */
+    /*background-color: gold;*/
+    /*border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+    border-top-right-radius: 100px; /* 100px of height + 10px of border */
+    border-bottom-right-radius: 100px;
+
+    border: 0px solid gray;
+    border-left: 0;
+    margin-top: 18%;
+    position: absolute;
+    background-color: #edf4fa
+    /*border-bottom: 0;*/
+}
+.sidenav {
+  margin-top: 120px;
+  /*margin-bottom: 40px;*/
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #edf4fa;
+    overflow-x: hidden;
+    transition: 0.2s;
+    
+    border:1px solid #edf4fa;
+    border-radius: 0;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    /*color: black;*/
+    display: block;
+    transition: 0.5s;
+
+}
+
+.sidenav li a:hover{
+    background-color: #5cb85c;
+    /*color: black;*/
+}
+.sidenav  li:nth-child(even){background-color: #edf4fa}
+.sidenav  li:nth-child(odd){background-color: #9bd0ff}
+
+#myNavID {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 0px;}
+  .sidenav a {font-size: 16px;}
+}
+
+.dropdown-menu li a{
+    font-size: 20px;
+
+  /*color: black;*/
+    padding: 5px 5px;
+    text-decoration: none;
+    font-family:none;
+    display: block;
+    background-color: #edf4fa;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.navbar-fixed-left {
+  /*width: 230px;
+  position: absolute;
+  border-radius: 0;
+  height: 80%;
+  background-color: #edf4fa;*/
+}
+
+.navbar-fixed-left .navbar-nav > li {
+  float: none;  /* Cancel default li float: left */
+  width: 247px;
+
+}
+.nav.navbar-nav li a {
+  color: black; /* font Color of the nav bar*/
+  padding: 12px 16px;
+}
+.navbar-fixed-left + .container {
+  /*padding-left: 160px;*/
+
+}
+
+/* On using dropdown menu (To right shift popuped) */
+.navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+  margin-top: -45px;
+  margin-left: 100%;
+  font-size: 100%;
+  width: 100%;
+  height: 100%;
+  /*padding: 8px 16px;*/
+
+}
+.navbar-nav li:nth-child(even){background-color: #edf4fa}
+.navbar-nav li:nth-child(odd){background-color: #9bd0ff}
+.nav.navbar-nav li a.active {
+  background-color: #5cb85c;
+  color: white;
+}
+
+
+.dropdown-menu a{
+  /*color: black;*/
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.7s;
+  animation-name: animatetop;
+  animation-duration: 0.7s
+}
+@-webkit-keyframes animatetop {
+  from { opacity:0}
+  to { opacity:1}
+}
+
+@keyframes animatetop {
+  from {right:-300px; opacity:0}
+  to {right:0; opacity:1}
+}
+ #gly-right {
+        float: right;
+        margin-top: 2px;
+        margin-right: -6px;
+    }
+
+</style>
+<p class="half-circle" id = "navBarOpen" onclick="openNav()" style="display: block">
+        <a href="#"> <span style="padding-top: 16px;" class="glyphicon glyphicon-chevron-right"></span></a>
+</p>
+<p class="half-circle" id = "navBarClose" onclick="closeNav()" style="margin-left:250px; display: none;">
+        <a href="#">  <span style="padding-top: 16px;" class="glyphicon glyphicon-chevron-left"></span></a>
+</p>
+
+<div id="mySidenav" class="sidenav text-left">
+
+<div class="navbar navbar-inverse navbar-fixed-left">
+    <ul class="nav navbar-nav">
+        <li><a class = "a1" href="../php/AdminHome.php"><span class="glyphicon glyphicon-home"></span>&nbsp;Dashboard</a></li>
+        <li class="dropdown"><a class = "a2" href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>&nbsp;Employees<span class="glyphicon glyphicon-chevron-right" id='gly-right'></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a class = "a21" href="../php/addEmp.php"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add Employee</a></li>
+                <li><a class = "a22" href="../php/viewEmp.php"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;View Employees</a></li>
+				<li><a class = "a23" href="../php/viewEmployees.php"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;View Employees (Img)</a></li>
+                <li><a class = "a24" href="../php/updateEmp.php"><span class="glyphicon glyphicon-edit"></span>&nbsp;Update Employee</a></li>
+                <li><a class = "a25" href="../php/empAttendance.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Employee Attendance</a></li>
+            </ul>
+        </li>
+		<li class="dropdown"><a class = "a3" href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-check"></span>&nbsp;Checklists<span class="glyphicon glyphicon-chevron-right" id='gly-right'></span></a>
+		<ul class="dropdown-menu" role="menu">
+			<li><a class = "a31" href="../php/checklist.php"><span class="glyphicon glyphicon-th-list"></span>&nbsp;View Checklists' Status</a></li>
+			<li><a class = "a32" href="../php/checklistUpdate.php"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Update Checklists</a></li>
+		</ul>
+		</li>
+		<li class="dropdown"><a class = "a4" href="" class="dropdown-toggle" data-toggle="dropdown"><span style="font-size: 20px;"id="rupee">&#8377; </span>&nbsp;Payroll<span class="glyphicon glyphicon-chevron-right" id='gly-right'></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a class = "a41" href="../php/viewPayroll.php">&nbsp;View Payroll</a></li>
+
+			</ul>
+		</li>
+        <!--<li class="dropdown"><a class = "a3" href="#" class="dropdown-toggle" data-toggle="dropdown">Leave Details<span class="glyphicon glyphicon-chevron-right"></span></a>
+          <ul class="dropdown-menu" role="menu">
+           <li><a href="../php/leave.php">Apply for Leave</a></li>
+           <li><a href="../php/LeaveRecord.php"> Leave Report</a></li>
+           <li><a href="../php/LeaveStatus.php">Check Status</a></li>
+          </ul>
+        </li>
+        <li><a class = "a4" href="../php/Holidays.php">Holidays</a></li>
+        <!-- <li><a href="#">Link3</a></li>
+        <li><a href="#">Link4</a></li>
+        <li><a href="#">Link5</a></li> -->
+    </ul>
+</div>
+
+</div>
+
+
+
+<script>
+<!-- function openNav() { -->
+    <!-- document.getElementById("mySidenav").style.width = "250px"; -->
+    <!-- document.getElementById("mySidenav").style.overflow = "visible"; -->
+    <!-- document.getElementById("myNavID").style.marginLeft = "250px"; -->
+    <!-- document.getElementById("navBarOpen").style.display = "none"; -->
+    <!-- document.getElementById("navBarClose").style.display = "block"; -->
+<!-- } -->
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.overflow = "auto";
+    document.getElementById("myNavID").style.marginLeft = "250px";
+    document.getElementById("navBarOpen").style.display = "none";
+    setTimeout(function myTimer() {
+
+    document.getElementById("navBarClose").style.display = "block";
+    document.getElementById("mySidenav").style.overflow = "visible";
+    // $("#navBarClose").css('transition','0.5s');
+    }, 200);
+
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.overflow = "hidden";
+    document.getElementById("myNavID").style.marginLeft= "0";
+    // document.getElementById("navBarOpen").style.display = "block";
+    document.getElementById("navBarClose").style.display = "none";
+}
+$(document).ready(function(){
+openNav();
+    $("#mySidenav").hover(function(){
+        $("#navBarOpen").css("display", "block");
+        }, function(){
+        $("#navBarOpen").css("display", "none");
+    });
+});
+$(document).ready(function(){
+    $("#navBarOpen").hover(function(){
+        $(this).css("display", "block");
+        }, function(){
+        $(this).css("display", "none");
+    });
+});
+</script>
+<div id="myNavID" >

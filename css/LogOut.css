@@ -1,0 +1,21 @@
+
+#a{border:1;border-radius: 0%;}	
+
+.submit
+{
+	position:fixed;
+	right:10px;
+	top:5px;
+	border: 1;
+	background: #EDEDED;
+	color: arial;
+	font-size: 12px;
+	padding: 5px 10px;
+}
+.submit:hover
+{
+	background: red;
+	cursor: pointer;
+}
+
+			

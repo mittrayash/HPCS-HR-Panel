@@ -1,0 +1,295 @@
+body
+{ 
+ background-color: #0a7e9c;/*#0a70bd;*/
+}
+
+.nav-head{
+	width:100%;
+	background-color:#edf4fa;
+	/*background-color:#4c9b71;/*rgb(0,67,168); ;*/
+
+}
+
+
+.nav-menu{
+	float: right;
+	font-size: larger;
+	color:#000000;
+	/*background-color:#808080;/*#4c9b71;/*rgb(0,67,168); ;*/
+
+}
+
+.main{
+	margin-left :15%;
+	width : 70%;
+	float : center;
+	background-color : #F5F5F5;
+	border-left : 5px;
+	padding-bottom: 30%;
+	box-shadow: 5px 5px 2px #888888;
+	margin-bottom : 20px;
+	/*background-repeat: no-repeat;
+	background-image: url(../images/forex-trading-header.jpg);/*
+	background-color: #ffffff;#Dcdcdc;/*#fff8dc;*/
+	/*font-family: "Chewy", sans-serif;/*Abril+Fatface|Alfa+Slab+One|Archivo+Black|Chewy|Chonburi|Covered+By+Your+Grace|
+	Gloria+Hallelujah|Kaushan+Script|Lobster+Two|Orbitron:400,900|Pacifico|Permanent+Marker|Righteous|Russo+One|Satisfy|Wendy+One"*/
+	height:70%;
+	 
+}
+
+.welcome{
+	font-size: 50px;
+	font-family: "Oswald", sans-serif;
+	text-align: center;
+	color: #000080;
+	padding-top:50px;
+}
+
+
+.listname{
+	font-size: 50px;
+	font-family: "Oswald", sans-serif;
+	height : 100px;
+}
+
+
+.footer{
+	background-color: #101010;
+	color: #ffffff;
+	text-align: center;
+	height:30px;
+}
+
+.footer_text{
+	padding-top: 25px;
+}
+
+.rotating{
+	background-color: #000080;
+	display: inline-block;
+	margin-left: 45%;
+	margin-bottom: 20%;
+	
+}
+
+.rotating:hover{
+	transform: rotate(100deg);
+
+}
+
+.rotate_text{
+	width:50px;
+	color:#ffffff;
+}
+
+#animated_div {
+	margin-left: 50px; 
+	width:100px;
+	height:75px;
+	background: #92B901;
+	color: #ffffff;
+	position: relative;
+	font-weight:bold;
+	font-size:20px;
+	padding:10px;
+	animation: animated_div 5s infinite;
+	border-radius:5px;
+  -webkit-border-radius:5px;
+}
+
+@keyframes animated_div
+{
+0% {transform: rotate(0deg);left:0px;}
+25% {transform: rotate(20deg);left:0px;}
+50% {transform: rotate(0deg);left:1000px;}
+55% {transform: rotate(0deg);left:1000px;}
+70% {transform: rotate(0deg);left:1000px;background:#1ec7e6;}
+100% {transform: rotate(-360deg);left:0px;}
+}
+
+
+.nav-menu > span > a{
+	padding-left: 5px;
+	padding-right: 5px;
+	text-decoration: none;
+	color:#000;
+}
+
+.nav-menu > span > a:hover{
+	background-color: green;
+	color:#ffffff;
+}
+
+.table-block{
+	background-color:#bddef4;
+	border-radius:15px;
+}
+
+.k_logo
+{ 
+ position:absolute;
+ height:100px;
+ /*width:190px;*/
+ left:120px;
+ 
+}
+
+.k_header
+{
+ width:100%;
+ height:136px;
+ background-color:#edf4fa;
+ border-bottom-color:white;
+ border-bottom-width:2px;
+ border-bottom-style:groove;
+ z-index:1;
+ 
+ 
+}
+
+.k_footer
+{ 
+ position:relative;
+ width:100%;
+ height:40px;
+ padding-top:5px;
+ top:45%;
+ background-color:#333;
+ border-top-style:1px solid #f2f2f2;
+ border-top-color:#d8d8dc;
+ border-top-width:2px;
+ border-top-style:groove;
+  
+}
+
+.footerText
+{ 
+ text-align:center;
+ color: #ffffff;
+ opacity: 0.7;
+ font-style:'Museo700';
+}
+
+
+.WelcomeText
+{
+/*position:absolute;*/
+ font-family:'arial';
+ font-size:1.5em;
+ font-weight:bold;
+ /*text-align:right;
+ margin-right:200px;
+ margin-left:850px;*/
+ color:#1c1c4a;/*6E0C1C;
+ /*width:200px;*/
+}
+
+.logoutBtn
+{ 
+float:right;
+margin-right:20px;
+margin-top:20px;
+width:100px;
+height:40px;
+color:#fff;
+ background-color:#449d44;
+ border-radius:5px;
+}
+
+.logoutBtn:hover
+{
+ background-color:#5cb85c;
+}
+
+.fixDiv
+  {
+   position:relative;
+   float: right;
+   margin-right:2.5%;
+  }
+  
+ .PanelText
+{
+  /*position:absolute;*/
+  font-family:'Algerian', serif;
+  font-size:2.68em;
+  font-weight:bold;
+  text-align:center;
+  margin-right:50%;
+  margin-left:33%;
+  margin-top:25px;
+  width:34%;
+  color:#1c1c4a;/*#6E0C1C;
+  /*left:422px;*/
+}
+
+.home-header{
+	position:absolute;
+	 width:100%;
+ height:136px;
+ background-color:#edf4fa;
+ border-bottom-color:white;
+ border-bottom-width:2px;
+ border-bottom-style:groove;
+ z-index:1;
+}
+
+.home-body{
+	position:relative;
+	margin-top:150px;
+}
+.clearfix:before,.clearfix:after{
+	content:" ";
+	display:table;
+
+}
+
+
+.clearfix:after
+{
+	clear:both;
+}
+
+.table-block{
+	 width:80%;
+	 margin-left:10%;
+	 margin-right:20%;
+	 background-color:#cccccc;
+	border-radius:5px;
+	overflow : auto;
+}
+
+
+.HeaderDivEdit
+{
+ position:relative;
+ height:60px;
+ width:80%;
+ margin-left:10%;
+ margin-right:20%;
+ border-radius:5px;
+ border: solid 1px #bbb; 
+ background-image: linear-gradient(#56c5eb, #1798c4);
+ padding-bottom:10px;
+ 
+}
+
+.headingTextEdit
+{
+ font-family:'sans-serif';
+ font-size:1.8em;
+ font-weight:bold;
+ color:#fff;
+ text-align:center;
+}
+
+.EditManagertable
+{
+ white-space:nowrap;
+ font-size:97%;
+}
+
+.thead-trow{
+	background-color:#eee !important;
+	border:solid 2px #000 !important;
+}

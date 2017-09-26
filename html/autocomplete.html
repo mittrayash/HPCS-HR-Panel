@@ -1,0 +1,9 @@
+<script src="../js/autocomplete.js"></script>
+<script type="text/javascript">
+	var availableTags = <?php echo json_encode($_SESSION['acc_arr']); ?>;
+	
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+	
+</script>

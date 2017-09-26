@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Employee</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head
+         content must come *after* these tags -->
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+
+        .divide{
+            border-color: #31b0d5;
+        }
+        #list2{
+            left: -5px;
+        }
+        #list1{
+            left: -5px;
+        }
+
+        .heading{
+            font-size: 25px;
+        }
+        .heading2{
+            font-size: 30px;
+        }
+        select {
+
+            border: 1px solid #111;
+            background-color: white;
+            background: white;
+            width: 150px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            height: 34px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url("../images/caret.png") 96% / 15% no-repeat white;
+            appearance: none;
+        }
+
+
+        /* CAUTION: IE hackery ahead */
+
+
+        select::-ms-expand {
+            display: none; /* remove default arrow in IE 10 and 11 */
+        }
+
+        /* target Internet Explorer 9 to undo the custom arrow */
+        @media screen and (min-width:0\0) {
+            select {
+                background:none\9;
+                padding: 5px\9;
+            }
+        }
+        label{
+            text-align: left ! important ;
+            width:210px ! important ;
+            float: left ! important ;
+        }
+        #label1, #label2{
+            left: 15px;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+
+    </script>
+
+
+</head>
+
+<body id="body" background="..\images\lb.jpg">
+<div class="container">
+
+    <div class="panel panel-default col-sm-11 panel-primary" id="panel1">
+        <div class="panel-heading"><span class="heading2"><b>Add New Employee</b></span></div>
+        <div class="panel-body col-sm-offset-2">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-9">
+                    <form class="form-horizontal" onsubmit="" action="AddEmployee.php" method="post">
+                        <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#data1"><span class="heading">General Details</span></button>
+                        <br/>
+                        <div id="data1" class="collapse">
+                            <div class="form-group">
+
+                                <label for="name" class="col-sm-4 control-label" id="abc"><span class="glyphicon glyphicon-user"></span>&nbsp;Full Name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="name" class="form-control" placeholder="Enter First Name" autofocus required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class='row'>
+                                    <label for="mode" class="col-sm-4 control-label" id="label1">Mode of Employment</label>
+                                    <div class="dropdown col-sm-4 " id="list2">
+                                        <select name="mode">
+                                            <option value="Full Time"><a>&nbsp;Full Time</a></option>
+                                            <option value="Part Time"><a>&nbsp;Part Time</a></option>
+                                            <option value="Intern"><a>&nbsp;Intern</a></option>
+                                        </select>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="eid" class="col-sm-4 control-label">Employee ID</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="eid" class="form-control" placeholder="Enter Employee ID" onchange="verifyUsernameAvailability(this.value);" required>
+                                </div>
+                                <br />
+                                <div>
+                                    <p><span id="reply" style="color: #bd4147; "></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#data2"><span class="heading">Personal Details</span></button><br />
+                        <div id="data2" class="collapse">
+
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <label for="dob" class="control-label">Date of Birth</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="date" name="dob" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="father" class="col-sm-4 control-label">Father's Name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="father" class="form-control" placeholder="Enter Father's Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class='row'>
+                                    <label for="bg" class="col-sm-4 control-label" id="label2">Blood Group</label>
+                                    <div class="dropdown col-sm-4" id="list1">
+
+                                        <select name="bg">
+                                            <option value="O-" selected="selected"><a>&nbsp;O-</a></option>
+                                            <option value="O+"><a>&nbsp;O+</a></option>
+                                            <option value="A-"><a>&nbsp;A-</a></option>
+                                            <option value="A+"><a>&nbsp;A+</a></option>
+                                            <option value="B-"><a>&nbsp;B-</a></option>
+                                            <option value="B+"><a>&nbsp;B+</a></option>
+                                            <option value="AB-"><a>&nbsp;AB-</a></option>
+                                            <option value="AB+"><a>&nbsp;AB+</a></option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="aadhar" class="control-label col-sm-4">Aadhar ID</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="aadhar" placeholder="Enter Aadhar ID" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="PAN" class="control-label col-sm-4">PAN ID</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="PAN" placeholder="Enter PAN ID" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="voter" class="control-label col-sm-4">Voter ID</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="voter" placeholder="Enter Voter ID" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="passport" class="control-label col-sm-4">Passport ID</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="passport" placeholder="Enter Passport ID" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="spouse" class="control-label col-sm-4">Spouse Phone/Email</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="spouse" placeholder="Enter Spouse's Phone No. or Email ID" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="bank" class="control-label col-sm-4">Bank Account Number</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="bank" placeholder="Enter Bank Account" class="form-control" required>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#data3"><span class="heading">Important Dates</span></button><br />
+                        <div id="data3" class="collapse">
+
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <label for="doj" class="control-label">Date of Joining</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="date" name="doj" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <label for="confirm" class="control-label">Confirm Date</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="date" name="confirm" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <label for="dor" class="control-label">Date of Registration</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="date" name="dor" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <label for="trainingStart" class="control-label">Training Start Date</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="date" name="trainingStart" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <label for="trainingComplete" class="control-label">Training Completion Date</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="date" name="trainingComplete" class="form-control" >
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#data4"><span class="heading">Contact Details</span></button><br />
+                        <div id="data4" class="collapse">
+
+                            <div class="form-group">
+                                <label for="primary" class="col-sm-4 col-xs-12 control-label">Primary Contact No.</label>
+
+                                <div class="col-xs-12 col-sm-8 col-md-8">
+                                    <input type="tel" name="primary" class="form-control" placeholder="Enter Primary Contact Number" maxlength="10" minlength="10">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="emergency" class="col-sm-4 col-xs-12 control-label">Emergency Contact No.</label>
+
+                                <div class="col-xs-12  col-sm-8 col-md-8">
+                                    <input type="tel" name="emergency" class="form-control" placeholder="Enter Emergency Contact Number" maxlength="10" minlength="10">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="presentAddr" class="col-sm-4 control-label">Present Address</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="presentAddr" class="form-control" placeholder="Enter Present Address" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="permaAddr" class="col-sm-4 control-label">Permanent Address</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="permaAddr" class="form-control" placeholder="Enter Permanent Address" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="personal" class="control-label col-sm-4">Personal Email ID</label>
+                                <div class="col-sm-8">
+                                    <input type="email" name="personal" placeholder="Enter Personal Email ID" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="official" class="control-label col-sm-4">Official Email ID</label>
+                                <div class="col-sm-8">
+                                    <input type="email" name="official" placeholder="Enter Official Email ID" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="skype" class="control-label col-sm-4">Skype ID</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="skype" placeholder="Enter Skype ID" class="form-control" required>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group">
+                            <div class="col-sm-2 col-sm-offset-5">
+                                <button type="submit" class="btn btn-primary btn-lg" id="submit" name="submit">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script type="text/javascript" src="../js/verifyUsername.js"></script>
+
+</body>
+</html>

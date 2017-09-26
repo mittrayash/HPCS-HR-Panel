@@ -1,0 +1,110 @@
+.badgeTxt
+{
+ position:relative;
+ color:#444;
+ left:-30px;
+ top:5px;
+ z-index:1;
+ font-weight:bold;
+}
+.mybadge
+{
+ position:relative;
+ color:#333;
+ background-color:white;
+ left:10px;
+ top:1px;
+ z-index:1;
+}
+
+/*    SEARCH Delete DIV  for admin access  */
+
+
+.searchDivDelete
+{ 
+ position:relative;
+ top:-30px;
+ left:10%;
+ width:80%;
+ height:35px;
+ 
+}
+.glyphicon-searchLogoDelete
+{
+ position:relative;
+ left:35px;
+ top:-8px;
+ z-index:1;
+}
+.searchBoxDelete
+{
+ position:relative;
+ top:-9px;
+ left:1px;
+ margin:10px;
+ background-color:#f2f2f2;
+ padding-left:30px;
+ padding-right:20px;
+ height:30px;
+ width:250px;
+ color: #86856f;
+ border-radius:20px;
+ border:1px solid #eee;
+ transition-property: width;
+    transition-duration: 1s;
+}
+.searchBoxDelete:hover
+{
+ background-color: #eee;
+ border-color:black;
+ 
+}
+
+.searchBoxDelete:focus 
+{ 
+ width:400px;
+ background-color:white;
+ border-color:#0000ff;
+}
+
+.searchBtnDelete
+{ 
+ position:relative;
+ height:33px;
+ width:90px;
+ top:-10px;
+ left:10px;
+ color:#fff;
+ font-family:'arial';
+ font-size:1em;
+ padding:2px;
+ border-radius:5px;
+ background-color:#d72b23;
+ border-color:#d72b23;
+} 
+
+.searchBtnDelete:hover
+{ 
+ background-color:#d74723;
+ color:#fff;
+}
+
+.backBtnDelete
+{
+ position:relative;
+ left:45%;
+ top:-65px;
+ width:90px;
+ background-color:#d72b23;
+ 
+}
+.backBtnDelete:hover
+{
+ background-color:#d74723;
+}
+
+.ui-autocomplete {
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
