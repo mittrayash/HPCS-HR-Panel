@@ -34,6 +34,10 @@ Salient Features in Proposed System:
 and SQL, AJAX and PHP as Backend. The peculiarities of the project are elucidated upon in the
 further upcoming chapters.
 
+## Technologies Used:  
+
+![Technologies](/ReadmeImages/Techno.png)  
+
 ![List of Tables](/ReadmeImages/1.png)
 
 ![Contents](/ReadmeImages/2.png)  
