@@ -31,4 +31,7 @@ Salient Features in Proposed System:
 **HPCS HR Panel** is developed using HTML, CSS, JavaScript, jQuery and Bootstrap as frontend
 and SQL, AJAX and PHP as Backend. The peculiarities of the project are elucidated upon in the
 further upcoming chapters.
+
+  ![List of Tables](/ReadmeImages/1.png)
+  
   
