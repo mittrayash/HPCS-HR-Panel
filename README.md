@@ -1,5 +1,7 @@
 # HPCS HR Panel
-An extensive HR Panel which incorporates all the basic manegerial tasks like Employee Attendance Checker, Employee Management etc.
+
+An extensive HR Panel which incorporates all the basic manegerial tasks like Employee Attendance Checker, Employee Management etc. Although the live version has some issues (due to code not deploying properly on server, the website can be seen live here: https://hpcs-hr-panel.000webhostapp.com/  
+
 ```
 Please refer to the file "HPCS Panel Info.pdf" for a more exhaustive and comprehensive report on the project
 including the testing breakdown. You may also refer to "Hpcs HR Panel.pptx" for a concise and succinct 
